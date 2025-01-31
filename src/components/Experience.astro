@@ -1,0 +1,32 @@
+---
+import { date } from "astro:schema"
+import ExperienceItem from "./ExperienceItem.astro"
+
+const experience = [
+    {
+        date: "Junio de 2024 - Octubre de 2024",
+        title: "Desarrollador de Software",
+        description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum necessitatibus modi, minima temporibus quaerat tempora dignissimos animi unde sunt accusantium! Facilis vitae autem quos ex aut doloribus error dicta magni?"
+    },
+    {
+        date: "Junio de 2023 - Junio de 2024",
+        title: "Analista de Innovación",
+        description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum necessitatibus modi, minima temporibus quaerat tempora dignissimos animi unde sunt accusantium! Facilis vitae autem quos ex aut doloribus error dicta magni?"
+    },
+    {
+        date: "Mayo de 2021 - Junio de 2023",
+        title: "Analista Senior",
+        description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum necessitatibus modi, minima temporibus quaerat tempora dignissimos animi unde sunt accusantium! Facilis vitae autem quos ex aut doloribus error dicta magni?"
+    }
+]
+
+---
+
+
+<ul>
+
+    {experience.map((item, index) => (
+        <ExperienceItem {...item} />
+    ))}
+
+</ul>
