@@ -1,0 +1,44 @@
+
+---
+import LinkedinIcon from "../assets/icons/LinkedinIcon.astro"
+import GithubIcon from "../assets/icons/GithubIcon.astro"
+import EmailIcon from "../assets/icons/EmailIcon.astro"
+---
+
+<footer class="relative w-full bg-gray-800 flex flex-col items-center pt-30 pb-15 mt-30 gap-y-6 text-white">
+
+    <div class="absolute top-[-40px] bg-indigo-700 w-[80%] rounded-2xl h-25 flex justify-between items-center text-white px-10">
+        
+
+        <p class="font-bold text-xl">Trabajemos Juntos</p>
+        <p class="text-md hidden lg:flex">¿Te interesa trabajar conmigo? ¡Contáctame!</p>
+        <a class="border-2 px-3 py-2 rounded-full mx-10 hover:bg-white hover:text-indigo-700 transition" href="#contact">Contacto</a>
+    </div>
+
+    <span class=" text-2xl"><strong>&lt/&gt</strong> Julián <strong>Daza</strong></span>
+
+    <ul class="flex flex-row gap-x-5">
+        <li>
+            <a href="https://www.linkedin.com/in/juli%C3%A1n-felipe-daza-rend%C3%B3n-84aa63212/" class="flex p-2 rounded-full border-2 border-white hover:cursor-pointer hover:scale-105 transition">
+                <LinkedinIcon className="size-6 stroke-white"/>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://github.com/jdazar18" class="flex p-2 rounded-full border-2 border-white hover:cursor-pointer hover:scale-105 transition">
+                <GithubIcon className="size-6 stroke-white"/>
+            </a>
+        </li>
+
+        <li>
+            <a href="mailto:jdazar@unal.edu.co" class="flex p-2 rounded-full border-2 border-white hover:cursor-pointer hover:scale-105 transition">
+                <EmailIcon className="size-6 stroke-white"/>
+            </a>
+        </li>
+
+
+    </ul>
+
+    <p>Desarrollado con ♡ por &copy Julián Daza</p>
+
+</footer>
