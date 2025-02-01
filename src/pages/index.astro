@@ -4,28 +4,38 @@ import Layout from '../layouts/Layout.astro';
 import photo from '../assets/photo.jpg';
 import Badge from '../components/Badge.astro';
 import Experience from "../components/Experience.astro";
+import Projects from "../components/Projects.astro";
 ---
 
 <Layout>
 	<main class="flex flex-col items-center w-full lg:w-[1200px]">
 
-		<section class="py-30 flex flex-col gap-y-5 items-center lg:flex-row lg:gap-x-15" id="about">
+		<section class="py-30 px-4 flex flex-col gap-y-5 items-center lg:flex-row lg:gap-x-15" id="about">
 
 			<div>
-				<img class="rounded-full w-50 h-50" src={photo.src} alt="Foto Julián Daza">
+				<img class="rounded-full size-55" src={photo.src} alt="Foto Julián Daza">
 			</div>
 
 			<div class="flex flex-col gap-y-8">
-				<h1 class="text-3xl font-bold text-gray-800">Hola, Soy Julián Daza</h1>
+				<!-- <h1 class="text-3xl font-bold text-gray-800">Hola, Soy Julián Daza</h1> -->
+				<h1 class="text-4xl font-bold bg-gradient-to-r from-cyan-600 to-purple-800 bg-clip-text text-transparent">Hola, Soy Julián Daza</h1>
 
 				<h2 class="max-w-lg text-lg text-gray-600">
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, quo dolore eos harum numquam impedit id vitae nihil quam amet placeat cumque possimus doloremque minus excepturi ut quod. Dolorem, hic.
+					Soy un desarrollador de software full stack con experiencia en el desarrollo de aplicaciones web. Me apasiona aprender nuevas tecnologías y trabajar en proyectos desafiantes.
 				</h2>
 		
-				<div class="flex flex-row gap-x-3">
+				<div class="flex flex-row gap-2 flex-wrap max-w-lg">
 					<Badge>HTML5</Badge>
 					<Badge>CSS3</Badge>
 					<Badge>JavaScript</Badge>
+					<Badge>React.js</Badge>
+					<Badge>Astro</Badge>
+					<Badge>Python</Badge>
+					<Badge>Flask</Badge>
+					<Badge>FastAPI</Badge>
+					<Badge>SQL</Badge>
+					<Badge>MongoDB</Badge>
+					<Badge>Git</Badge>
 				</div>
 				<!-- <a href="#" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get started</a> -->
 			</div>
@@ -33,11 +43,14 @@ import Experience from "../components/Experience.astro";
 		</section>
 
 
-		<section id="experience" class="text-gray-800">
-
-			<h2 class="text-xl font-bold mb-5">Mi Experiencia</h2>
-
+		<section id="experience" class="px-4 text-gray-800 py-8 w-full lg:w-[1000px] flex flex-col items-center">
+			<h2 class="text-xl font-bold mb-5 w-full">Experiencia</h2>
 			<Experience/>
+		</section>
+
+		<section id="projects" class="px-4 text-gray-800 py-8 w-full lg:w-[1000px] flex flex-col items-center">
+			<h2 class="text-xl font-bold mb-5 w-full">Proyectos</h2>
+			<Projects/>
 		</section>
 
 	</main>

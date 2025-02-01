@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
-import photo from '../assets/photo.jpg';
+import GithubIcon from "../assets/icons/GithubIcon.astro";
+import LinkedinIcon from "../assets/icons/LinkedinIcon.astro";
 ---
 
 <header class="flex justify-between items-center py-3 px-4 w-full lg:w-[1200px]">
@@ -12,12 +13,14 @@ import photo from '../assets/photo.jpg';
     <nav class="flex flex-row gap-x-3 text-gray-800">
         <a class="rounded-full px-2 py-1 hover:bg-gray-200 transition" href="#about">Sobre Mí</a>
         <a class="rounded-full px-2 py-1 hover:bg-gray-200 transition" href="#experience">Experiencia</a>
-        <a class="rounded-full px-2 py-1 hover:bg-gray-200 transition" href="#education">Educación</a>
+        <!-- <a class="rounded-full px-2 py-1 hover:bg-gray-200 transition" href="#education">Educación</a> -->
         <a class="rounded-full px-2 py-1 hover:bg-gray-200 transition" href="#projects">Proyectos</a>
         <a class="rounded-full px-2 py-1 hover:bg-gray-200 transition" href="#contact">Contacto</a>
     </nav>
     
-    <div>
-
+    <div class="flex flex-row gap-1">
+        <a href="https://www.linkedin.com/in/juli%C3%A1n-felipe-daza-rend%C3%B3n-84aa63212/" target="_blank"> <LinkedinIcon className="size-9 stroke-gray-700 p-2 rounded-xl hover:bg-gray-200 hover:cursor-pointer transition"/></a>
+        <a href="https://github.com/jdazar18" target="_blank"><GithubIcon className="size-9 stroke-gray-700 p-2 rounded-xl hover:bg-gray-200 hover:cursor-pointer transition"/></a>
+       
     </div>
 </header>

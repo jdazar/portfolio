@@ -1,0 +1,64 @@
+
+---
+
+import JavascriptIcon from '../assets/icons/JavascriptIcon.astro';
+import ReactIcon from '../assets/icons/ReactIcon.astro';
+import AstroIcon from '../assets/icons/AstroIcon.astro';
+import TailwindIcon from '../assets/icons/TailwindIcon.astro';
+import CssIcon from '../assets/icons/CssIcon.astro';
+
+
+interface Props {
+    title: string;
+    description: string;
+    image: string;
+    technologies: string[];
+    demoUrl: string;
+    githubUrl: string;
+}
+
+const {title, description, image, technologies, demoUrl, githubUrl} = Astro.props;
+
+const icons: { [key: string]: any } = {
+    "JavaScript": JavascriptIcon,
+    "React": ReactIcon,
+    "Astro": AstroIcon,
+    "Tailwind": TailwindIcon,
+    "CSS": CssIcon
+}
+
+
+---
+
+
+
+<article class="w-md bg-white shadow-2xl rounded-3xl p-7 flex flex-col gap-7 hover:scale-102 transition">
+    <div>
+        <img class="rounded-2xl" src={image} alt="Foto del proyecto">
+    </div>
+    <div class="flex flex-col gap-2">
+        <h3 class="text-lg text-gray-800">{title}</h3>
+        <p class="text-gray-600">{description}</p>
+    </div>
+
+    <div class="flex flex-row justify-between items-center">
+        <ul class="flex flex-row gap-3">
+            {technologies.map((tecnology, index) => {
+
+                const Icon = icons[tecnology];
+                return (
+                    <li>
+                        <Icon className="size-7"/>
+                    </li>
+                )
+
+            })}
+        </ul>
+
+        <div class="flex flex-row gap-x-2 items-center">
+            <a class="px-4 py-2 rounded-full border-indigo-600 border-1 text-indigo-600" href={githubUrl} target="_blank">GitHub</a>
+            <a class="px-4 py-2 bg-indigo-500 rounded-full text-white hover:bg-indigo-600 transition" href={demoUrl} target="_blank">Demo</a>
+        </div>
+        
+    </div>
+</article>

@@ -1,0 +1,42 @@
+---
+import ProjectCard from "./ProjectCard.astro"
+import projectPortfolioImage from  "../assets/project-portfolio.png"
+import projectDashboardImage from  "../assets/project-dashboard.png"
+
+const projects = [
+    {
+        title: "Portafolio",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
+        image: projectPortfolioImage.src,
+        technologies: ["JavaScript", "Astro", "Tailwind"],
+        demoUrl: "https://jdazar18.github.io/portfolio/",
+        githubUrl : "https://github.com/jdazar18/portfolio"
+    },
+    {
+        title: "Dashboard",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
+        image: projectDashboardImage.src,
+        technologies: ["JavaScript", "React", "CSS"],
+        demoUrl: "https://jdazar18.github.io/portfolio/",
+        githubUrl : "https://github.com/jdazar18/portfolio"
+    }
+]
+---
+
+
+<div class="flex flex-col gap-5 flex-wrap justify-center lg:flex-row">
+
+    {projects.map((project, index) => (
+        <ProjectCard {...project} />
+    ))}
+
+</div>
+
+
+
+
+
+
+
+
+
