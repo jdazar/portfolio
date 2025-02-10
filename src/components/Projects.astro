@@ -2,23 +2,35 @@
 import ProjectCard from "./ProjectCard.astro"
 import projectPortfolioImage from  "../assets/project-portfolio.png"
 import projectDashboardImage from  "../assets/project-dashboard.png"
+import projectDocumentationImage from  "../assets/project-documentation.png"
 
 const projects = [
     {
+        title: "Documentación Personal",
+        description: "Proyecto para documentar mis conocimientos y experiencias en el desarrollo de software. Creado con VitePress.",
+        image: projectDocumentationImage.src,
+        technologies: ["Vue", "TypeScript", "Markdown"],
+        demoUrl: "https://jdazar.github.io/documentation/",
+        githubUrl : "https://github.com/jdazar/documentation",
+        underConstruction: true
+    },
+    {
         title: "Portafolio",
-        description: "Proyecto para mostrar mis habilidades y proyectos realizados y mejorar mis habilidades con Astro.js y Tailwind CSS.",
+        description: "Proyecto para mostrar mis proyectos personales realizados y mejorar mis habilidades con Astro.js y Tailwind CSS.",
         image: projectPortfolioImage.src,
         technologies: ["JavaScript", "Astro", "Tailwind"],
         demoUrl: "https://jdazar.github.io/portfolio/",
-        githubUrl : "https://github.com/jdazar/portfolio"
+        githubUrl : "https://github.com/jdazar/portfolio",
+        underConstruction: false
     },
     {
         title: "Dashboard",
-        description: "Proyecto de práctica para mejorar mis habilidades en React.js, el manejo de gráficos con Chart.js y el uso de la librería React Grid Layout.",
+        description: "Proyecto para mejorar mis habilidades en React.js, el manejo de gráficos con Chart.js y el uso de la librería React Grid Layout.",
         image: projectDashboardImage.src,
         technologies: ["JavaScript", "React", "CSS"],
         demoUrl: "https://jdazar.github.io/dashboard/",
-        githubUrl : "https://github.com/jdazar/dashboard"
+        githubUrl : "https://github.com/jdazar/dashboard",
+        underConstruction: false
     }
 ]
 ---

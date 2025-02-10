@@ -6,6 +6,9 @@ import ReactIcon from '../assets/icons/ReactIcon.astro';
 import AstroIcon from '../assets/icons/AstroIcon.astro';
 import TailwindIcon from '../assets/icons/TailwindIcon.astro';
 import CssIcon from '../assets/icons/CssIcon.astro';
+import VueIcon from '../assets/icons/VueIcon.astro';
+import TypescriptIcon from '../assets/icons/TypescriptIcon.astro';
+import MarkdownIcon from '../assets/icons/MarkdownIcon.astro';
 
 
 interface Props {
@@ -15,16 +18,20 @@ interface Props {
     technologies: string[];
     demoUrl: string;
     githubUrl: string;
+    underConstruction?: boolean;
 }
 
-const {title, description, image, technologies, demoUrl, githubUrl} = Astro.props;
+const {title, description, image, technologies, demoUrl, githubUrl, underConstruction = false} = Astro.props;
 
 const icons: { [key: string]: any } = {
     "JavaScript": JavascriptIcon,
+    "TypeScript": TypescriptIcon,
     "React": ReactIcon,
     "Astro": AstroIcon,
     "Tailwind": TailwindIcon,
-    "CSS": CssIcon
+    "CSS": CssIcon,
+    "Vue": VueIcon,
+    "Markdown": MarkdownIcon
 }
 
 
@@ -32,8 +39,9 @@ const icons: { [key: string]: any } = {
 
 
 
-<article class="sm:w-sm bg-white shadow-2xl rounded-3xl p-7 flex flex-col gap-7 hover:scale-102 transition lg:w-md">
-    <div>
+<article class="sm:w-sm justify-between bg-white shadow-2xl rounded-3xl p-7 flex flex-col gap-7 hover:scale-102 transition lg:w-md">
+    <div class="relative">
+        {underConstruction && <span class="absolute right-2 top-2 bg-indigo-500 text-white px-2 py-1 rounded-md">En contrucción</span>} 
         <img class="rounded-2xl" src={image} alt="Foto del proyecto">
     </div>
     <div class="flex flex-col gap-2">
