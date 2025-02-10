@@ -8,6 +8,6 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
   },
-  site: 'https://jdazar18.github.io',
+  site: 'https://jdazar.github.io',
   base: 'portfolio',
 });
